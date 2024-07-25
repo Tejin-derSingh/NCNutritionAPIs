@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const AutoIncrement = require("mongoose-sequence")(mongoose);
+// const AutoIncrement = require("mongoose-sequence")(mongoose);
 const {v4:uuidv4} = require("uuid");
 // const express = require('express');
 // const { Timestamp } = require("mongodb");
@@ -8,7 +8,7 @@ const cors = require("cors");
 
 const productschema = mongoose.Schema(
 {
-    _id:{type:Number},
+     _id:{type:Number},
  productname:{type:String,required:[true ,"Please enter name"]},
  //productimage:{data:Buffer,contentType:String},
     productimage:{type:String},
@@ -21,10 +21,10 @@ const productschema = mongoose.Schema(
 },
 
 {timestamps:true,
-_id:false,
+// _id:false,
 });
 
-productschema.plugin(AutoIncrement,{id:'productsequence',inc_field:'_id'})
+// productschema.plugin(AutoIncrement,{id:'productsequence',inc_field:'_id'})
 
 const Products = mongoose.model("Product", productschema)
 
