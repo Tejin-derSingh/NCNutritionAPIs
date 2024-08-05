@@ -8,7 +8,7 @@ const cors = require("cors");
 
 const productschema = mongoose.Schema(
 {
-     _id:{type:Number},
+    //  _id:{type:Number},
  productname:{type:String,required:[true ,"Please enter name"]},
  //productimage:{data:Buffer,contentType:String},
     productimage:{type:String},
@@ -21,7 +21,7 @@ const productschema = mongoose.Schema(
 },
 
 {timestamps:true,
-// _id:false,
+//  _id:false,
 });
 
 // productschema.plugin(AutoIncrement,{id:'productsequence',inc_field:'_id'})
