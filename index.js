@@ -62,8 +62,6 @@ const createdproduct = new Products({
 createdproduct.save().then(()=>{res.send("successfully uploaded")}).catch(err=>console.log(err))
     })
 
-
-
     app.get("/Addproduct",async(req,res,next)=>{
         try{
             const createdproduct = await Products.find({})
@@ -135,4 +133,4 @@ createdposter.save().then(()=>{res.send("successfully uploaded")}).catch(err=>co
     }
     });
 
-    
+
